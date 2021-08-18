@@ -1,0 +1,20 @@
+body{
+    background-color: blanchedalmond;
+}
+
+.d1{
+    background-color: whitesmoke;
+    position:relative;
+    height: 550px;
+    width: 520px;
+    border-radius: 10px;
+}
+
+.h3{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.form-control{
+    
+    width: 400px;
+}
