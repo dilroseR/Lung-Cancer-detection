@@ -3,7 +3,28 @@
         <title>Lung Cancer Detection</title>
         <!-- CSS only -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">  
-        <link rel="stylesheet" href="static/main.css">
+        <style>
+            body{
+                background-color: blanchedalmond;
+            }
+
+            .d1{
+                background-color: whitesmoke;
+                position:relative;
+                height: 550px;
+                width: 520px;
+                border-radius: 10px;
+            }
+
+            .h3{
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+
+            .form-control{
+                
+                width: 400px;
+            }
+        </style>
     </head>
 
     <body>
@@ -17,21 +38,21 @@
             <br>
             <form action="/signup" method="POST">
             <div class="mb-3">
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Full Name" required>
+                <input type="text" class="form-control" id="exampleFormControlInput1" name = 'name' placeholder="Full Name" required>
                 <br>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Username" required>
+                <input type="text" class="form-control" id="exampleFormControlInput1" name= 'uname' placeholder="Username" required>
                 <br>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Password" required>
+                <input type="text" class="form-control" id="exampleFormControlInput1" name= 'pw1' placeholder="Password" required>
                 <br>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Retype your password" required>
+                <input type="text" class="form-control" id="exampleFormControlInput1" name = 'pw2' placeholder="Retype your password" required>
             </div>
             <br>
-            <button type="button" class="btn btn-danger">SIGN UP</button>
+            <button type="submit" class="btn btn-danger">SIGN UP</button>
             </form>
             <br><br>
-            <p>Have an account already? <a href="login.html"><b>Login here</b></a></p>
+            <p>Have an account already? <a href='{{ url_for("login") }}'><b>Login here</b></a></p>
         </div>
     </center>
-    
+    {{ msg }}
     </body>
 </html>

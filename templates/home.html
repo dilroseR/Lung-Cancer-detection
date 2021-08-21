@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title></title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">  
+    <style>            
+        .topnav {
+        overflow: hidden;
+        background-color: #125e91;
+      
+        }
+
+        .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        }
+
+        .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+        }
+
+        .topnav a.active {
+        background-color: #6fa2c4;
+        color: white;
+        }
+
+        .topnav-right {
+        float: right;
+        }
+
+        .a1{
+            color: #ddd;
+        }
+
+        .a1 a:hover {
+        background-color: black;
+        color: #ddd;
+        }
+    </style>
+    </head>
+
+    <body>
+        <div class="topnav">
+            <a class="active" href='{{ url_for("home") }}'>Home</a>
+            
+            <a class="a1"><b>Lung Cancer Detection</b></a>
+            
+            <div class="topnav-right">
+              <a href='{{ url_for("login") }}'>Login</a>
+              <a href='{{ url_for("signup") }}'>Register</a>
+            </div>
+          </div>
+      
+       
+    </body>
+</html>
