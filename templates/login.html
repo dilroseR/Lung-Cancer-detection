@@ -1,8 +1,76 @@
 <html>
     <head>
         <title>hello</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">  
+        <style>
+            .d1{
+                height: 80%;
+                width:40%;
+                background-color: rgb(184, 188, 250);
+                float: right;
+                margin-right: 8%;
+                margin-top: 3%;
+                border-radius: 10px;
+            }
+            .d2{
+                float: left;
+                width:35%;
+                height: 80%;
+                
+                margin-left: 10%;
+                margin-top: 5%;
+            }
+            .d2 h1{
+                font-size: 65px;
+                margin: 0;
+                position: absolute;
+                top: 35%;
+                left:27%;
+                transform: translate(-50%, -50%);
+            }
+            .form-control{
+                width: 400px;
+                background-color:rgb(226, 228, 255) ;
+            }
+            .l1{
+                margin-left: 7%;
+                font-size: 16px;
+
+            }
+        </style>
     </head>
     <body>
-        <p>hii</p>
+       
+        
+        <div class="container">
+            <div class="d2">
+                  <h1>Welcome back!</h1>
+              
+            </div>
+            <div class="d1">
+                <br><br><br>
+                <center>
+                <h2>Account Login</h2>
+                <br><br>
+                    <form action="/login" method="POST">
+                    </center>
+                        <label class="l1" for=""><b>Username</b></label>
+                        <center>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" name= 'uname' placeholder="Enter your username" required>
+                        <br><br>
+                    </center>
+                        <label class="l1" for=""><b>Password</b></label>
+                        <center>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" name= 'pw' placeholder="Enter your password" required>
+                        <br><br>
+                        <button type="submit" class="btn btn-dark">LOGIN</button>
+                        <br><br><br>
+                        <p>Don't have an account? <a href='{{ url_for("signup") }}'><b>Signup</b></a></p>
+                    </form>
+                </center>
+                {{ msg }}
+            </div> 
+        </div>
+      
     </body>
 </html>

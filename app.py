@@ -2,6 +2,8 @@ from flask import Flask, render_template, request, redirect, url_for, session
 from sqlite3 import *
 
 app = Flask(__name__)
+app.secret_key = 'lungcancerdetection'
+
 @app.route('/', methods=['POST','GET'])
 def home():
     return render_template('home.html')
@@ -39,7 +41,37 @@ def signup():
 
 @app.route('/login', methods=['POST','GET'])
 def login():
-    return render_template("login.html")
+    if request.method == 'POST':
+        uname = request.form['uname']
+        pw = request.form['pw']
+        con=None
+        try:
+            con = connect('lung_cancer.db')
+            cursor = con.cursor()
+            sql = "select * from users where uname ='%s' and pw = '%s'"
+            cursor.execute(sql % (uname,pw))
+            con.commit()
+            data = cursor.fetchall()
+            if len(data) == 0:
+                return render_template('login.html', msg = 'invalid login')
+            else:
+                session['uname'] = uname
+                return redirect(url_for('home'))
+
+        except Exception as e:
+            con.rollback()
+            msg = "issue" + str(e)
+            return render_template('login.html',msg=msg)
+        
+        finally:
+            if con is not None:
+                con.close()
+    else:
+        return render_template('login.html')
+
+
+
+    
 
 
         
