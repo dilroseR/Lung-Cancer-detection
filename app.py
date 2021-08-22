@@ -80,10 +80,8 @@ def main():
 def logout():
 	session.pop('uname',None)
 	return redirect(url_for('login'))
-    
-@app.route('/fp', methods=["POST","GET"])
-def fp():
-    
+
+
 
         
 if __name__ == '__main__':

@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title></title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">  
+        <style>
+            
+            .d1{
+                margin-top:3%;
+                background-color: whitesmoke;
+                position:relative;
+                height: 550px;
+                width: 520px;
+                border-radius: 10px;
+            }
+
+            .h3{
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+
+            .form-control{
+                
+                width: 400px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <center>
+        <div class="d1">
+            <br><br>
+            <h3>Forgot Password?</h3>
+            <br><br>
+            <form action="/fp" method="POST">
+            <div class="mb-3">
+                <input type="text" class="form-control" id="exampleFormControlInput1" name= 'uname' placeholder="Enter your username" required>
+                <br>
+                <input type="email" class="form-control" id="exampleFormControlInput1" name= 'email' placeholder="Enter your email" required>
+                <br>
+                <input type="text" class="form-control" id="exampleFormControlInput1" name= 'pw1' placeholder="New Password" required>
+                <br>
+                <input type="text" class="form-control" id="exampleFormControlInput1" name = 'pw2' placeholder="Confirm new password" required>
+            </div>
+            <br><br><br>
+            <button type="submit" class="btn btn-danger">Submit</button>
+            </form>
+        </div>
+        </center>
+
+    </body>
+</html>
