@@ -56,7 +56,7 @@ def login():
                 return render_template('login.html', msg = 'invalid login')
             else:
                 session['uname'] = uname
-                return redirect(url_for('home'))
+                return redirect(url_for('main'))
 
         except Exception as e:
             con.rollback()
@@ -69,10 +69,21 @@ def login():
     else:
         return render_template('login.html')
 
+@app.route('/main', methods=['POST','GET'])
+def main():
+    if 'uname' in session:
+        return render_template('main.html', name=session['uname'])
+    else:
+        return redirect(url_for('login'))
 
-
+@app.route('/logout', methods=['POST','GET'])
+def logout():
+	session.pop('uname',None)
+	return redirect(url_for('login'))
     
-
+@app.route('/fp', methods=["POST","GET"])
+def fp():
+    
 
         
 if __name__ == '__main__':
