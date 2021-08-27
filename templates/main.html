@@ -40,6 +40,23 @@
         background-color: black;
         color: #ddd;
         }
+
+        h2{
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .d1{
+            height: 1570px;
+            width: 700px;
+            background-color: rgb(248, 248, 222);
+            position: relative;
+            margin: 0 auto;
+            padding: 20px;
+            
+        }
+        .form-control{
+                width: 400px;
+        }
         </style>
     </head>
 
@@ -51,5 +68,225 @@
               <a href='{{ url_for("logout") }}'>Logout</a>
             </div>
           </div>
+          <center>
+              <br>
+              <h2><b>Check the status of your lungs</b></h2>
+              <br>
+          </center>
+          <div class="d1">
+            <label class="l1" for=""><b>1. Age</b></label>
+            
+            <input type="text" class="form-control" id="exampleFormControlInput1" name= 'age' placeholder="Enter your age" required>
+            <br>
+
+            <label class="l1" for=""><b>2. Smoke?</b></label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="r2" id="flexRadioDefault1" value="yes">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Yes
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="r2" id="flexRadioDefault1" value="no">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  No
+                </label>
+            </div>
+            <br>
+
+            <label class="l1" for=""><b>3. Yellow Fingers?</b></label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="r3" id="flexRadioDefault1" value="yes">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Yes
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="r3" id="flexRadioDefault1" value="no">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  No
+                </label>
+            </div>
+            <br>
+            <label class="l1" for=""><b>4. Having anxiety?</b></label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="r4" id="flexRadioDefault1" value="yes">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Yes
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="r4" id="flexRadioDefault1" value="no">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  No
+                </label>
+            </div>
+            <br>
+
+            <label class="l1" for=""><b>5. Facing with peer pressure?</b></label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="r5" id="flexRadioDefault1" value="yes">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Yes
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="r5" id="flexRadioDefault1" value="no">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  No
+                </label>
+            </div>
+            <br>
+
+            <label class="l1" for=""><b>6. Having any chronic disease?</b></label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="r6" id="flexRadioDefault1" value="yes">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Yes
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="r6" id="flexRadioDefault1" value="no">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  No
+                </label>
+            </div>
+            <br>
+
+            <label class="l1" for=""><b>7. Fatigue?</b></label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="r7" id="flexRadioDefault1" value="yes">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Yes
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="r7" id="flexRadioDefault1" value="no">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  No
+                </label>
+            </div>
+            <br>
+
+            <label class="l1" for=""><b>8. Allergy?</b></label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="r8" id="flexRadioDefault1" value="yes">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Yes
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="r8" id="flexRadioDefault1" value="no">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  No
+                </label>
+            </div>
+            <br>
+
+            <label class="l1" for=""><b>9. Wheezing?</b></label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="r9" id="flexRadioDefault1" value="yes">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Yes
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="r9" id="flexRadioDefault1" value="no">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  No
+                </label>
+            </div>
+            <br>
+
+            <label class="l1" for=""><b>10. Do you consume alcohol?</b></label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="r10" id="flexRadioDefault1" value="yes">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Yes
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="r10" id="flexRadioDefault1" value="no">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  No
+                </label>
+            </div>
+            <br>
+
+            <label class="l1" for=""><b>11. Do you get coughing?</b></label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="r11" id="flexRadioDefault1" value="yes">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Yes
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="r11" id="flexRadioDefault1" value="no">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  No
+                </label>
+            </div>
+            <br>
+
+            <label class="l1" for=""><b>12. Do you experience shortness of breath?</b></label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="r12" id="flexRadioDefault1" value="yes">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Yes
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="r12" id="flexRadioDefault1" value="no">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  No
+                </label>
+            </div>
+            <br>
+
+            <label class="l1" for=""><b>13. Any difficulty in swallowing?</b></label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="r13" id="flexRadioDefault1" value="yes">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Yes
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="r13" id="flexRadioDefault1" value="no">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  No
+                </label>
+            </div>
+            <br>
+
+            <label class="l1" for=""><b>14. Have you had any chest pain in the past/present?</b></label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="r14" id="flexRadioDefault1" value="yes">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Yes
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="r14" id="flexRadioDefault1" value="no">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  No
+                </label>
+            </div>
+            <br>
+
+            <label class="l1" for=""><b>15. Gender</b></label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="r15" id="flexRadioDefault1" value="male">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Male
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="r15" id="flexRadioDefault1" value="female">
+                <label class="form-check-label" for="flexRadioDefault1">
+                 Female
+                </label>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-secondary">Submit</button>
     </body>
 </html>
