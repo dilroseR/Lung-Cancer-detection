@@ -74,6 +74,7 @@
               <br>
           </center>
           <div class="d1">
+          <form action="/check" method="POST">
             <label class="l1" for=""><b>1. Age</b></label>
             
             <input type="text" class="form-control" id="exampleFormControlInput1" name= 'age' placeholder="Enter your age" required>
@@ -288,5 +289,8 @@
             </div>
             <br>
             <button type="submit" class="btn btn-secondary">Submit</button>
+          </form>
+          <br><br>
+          {{ msg }}
     </body>
 </html>
