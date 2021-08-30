@@ -46,7 +46,7 @@
         }
 
         .d1{
-            height: 1570px;
+            height: 1650px;
             width: 700px;
             background-color: rgb(248, 248, 222);
             position: relative;
@@ -70,7 +70,15 @@
           </div>
           <center>
               <br>
-              <h2><b>Check the status of your lungs</b></h2>
+              
+                {% if(msg == 1) %}
+                <div class="alert alert-dark" role="alert">
+                    Mail sent!(Check the spam folder too)
+                  </div>  
+                 {% endif %}
+             
+
+              <h2><b>Check the status of your lungs!</b></h2>
               <br>
           </center>
           <div class="d1">
@@ -288,9 +296,14 @@
                 </label>
             </div>
             <br>
-            <button type="submit" class="btn btn-secondary">Submit</button>
+            <label class="l1" for=""><b>Email</b></label>
+            
+            <input type="email" class="form-control" id="exampleFormControlInput1" name= 'em' placeholder="Enter email to send the results" required>
+            <br>
+            <button type="submit" class="btn btn-secondary">Send</button>
+
           </form>
           <br><br>
-          {{ msg }}
+          
     </body>
 </html>
