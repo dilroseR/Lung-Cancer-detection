@@ -37,17 +37,27 @@
                 font-size: 16px;
 
             }
+            .alert-danger{
+                text-align: center;
+            }
         </style>
     </head>
     <body>
-       
+        {% if(msg == 1) %}
+        <div class="alert alert-danger" role="alert">
+            Invalid login
+          </div>      
+    {% endif %}
         
         <div class="container">
             <div class="d2">
                   <h1>Welcome back!</h1>
-              
+                  <center>
+                  
+            </center>
             </div>
             <div class="d1">
+                
                 <br><br>
                 <center>
                 <h2>Account Login</h2>
@@ -65,11 +75,11 @@
                         <br><br>
                         <button type="submit" class="btn btn-dark">LOGIN</button>
                         <br><br>
-                        <p><a href=""><b>Forgot password? </b></a></p> 
+                        <p><a href='{{ url_for("fp") }}'><b>Forgot password? </b></a></p> 
                         <p>Don't have an account? <a href='{{ url_for("signup") }}'><b>Signup</b></a></p>
                     </form>
                 </center>
-                {{ msg }}
+                
             </div> 
         </div>
       

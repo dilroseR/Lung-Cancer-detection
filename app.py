@@ -39,13 +39,13 @@ def signup():
             except Exception as e:
                 con.rollback()
                 print("Issue: " ,e)
-                return render_template('signup.html',msg='user already registered')
+                return render_template('signup.html',msg=4)
 
             finally:
                 if con is not None:
                     con.close()
         else:
-            return render_template('signup.html',msg="Passwords didn't match")
+            return render_template('signup.html',msg=3)
     else:
         return render_template('signup.html')
 
@@ -63,7 +63,7 @@ def login():
             con.commit()
             data = cursor.fetchall()
             if len(data) == 0:
-                return render_template('login.html', msg = 'invalid login')
+                return render_template('login.html', msg = 1)
             else:
                 session['uname'] = uname
                 return redirect(url_for('main'))
@@ -228,6 +228,47 @@ def check():
 
     else:
         return render_template('main.html')
+
+@app.route('/fp', methods=['POST','GET'])
+def fp():
+    if request.method == 'POST':
+        uname = request.form['uname']
+        em = request.form['email']
+        pw1 = request.form['pw1']
+        pw2 = request.form['pw2']
+        
+        con=None
+        try:
+            con = connect('lung_cancer.db')
+            cursor = con.cursor()
+            sql = "select * from users where uname ='%s'"
+            cursor.execute(sql % (uname))
+            data = cursor.fetchall()
+            if len(data) == 0:
+                return render_template('fp.html', message = 1)
+            else:
+                if pw1 == pw2:
+                    sql = "update users set pw = '%s' where uname = '%s'"
+                    cursor.execute(sql % (pw1,uname))
+                    con.commit()
+                    msg = Message('Password changed!', sender="dreji1234@gmail.com", recipients=[em])
+                    msg.body = 'Your password was resetted successfully!'
+                    mail.send(msg)
+                    return render_template('fp.html',message = 2)
+                else:
+                    return render_template('fp.html',message = 3)
+                
+        except Exception as e:
+            con.rollback()
+            return render_template('fp.html',message = 4)
+
+        finally:
+            if con is not None:
+                con.close()
+
+        
+    else:
+        return render_template('fp.html')
 
 
 

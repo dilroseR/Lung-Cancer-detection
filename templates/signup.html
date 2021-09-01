@@ -31,6 +31,16 @@
 
     <center>
         <br>
+        {% if(msg == 3) %}
+                <div class="alert alert-danger" role="alert">
+                    Passwords didn't match
+                  </div>      
+            {% endif %}
+        {% if(msg == 4) %}
+            <div class="alert alert-warning" role="alert">
+                    User already registered
+                  </div>      
+            {% endif %}
         <br>
         <div class="d1">
             <br><br>
