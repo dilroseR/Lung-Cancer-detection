@@ -1,8 +1,9 @@
 <html>
     <head>
-        <title></title>
+        <title>Lung Cancer Detection</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">  
-    <style>            
+    <style>    
+       
         .topnav {
         overflow: hidden;
         background-color: #125e91;
@@ -40,6 +41,12 @@
         background-color: black;
         color: #ddd;
         }
+        h1{
+            font-size: 42px;
+        }
+        p{
+            font-size: 18px;
+        }
     </style>
     </head>
 
@@ -54,6 +61,68 @@
               <a href='{{ url_for("signup") }}'>Register</a>
             </div>
           </div>
+          <div class="container">
+              <br><br>
+              <h1><b>What is Lung Cancer?</b></h1>
+              <br>
+              <p>Lung cancer is a type of cancer that starts in the lungs. Cancer starts when cells in the body begin to grow out of control.</p>
+                <br>
+                <h1><b>Types of Lung Cancer</b></h1>
+                <p>There are 2 types of lung cancer and they are:</p>
+                <h5>A.) Small cell lung cancer (SCLC)</h5>
+                <p>This type of lung cancer tends to grow and spread faster than NSCLC. Since this cancer grows quickly, it tends to respond well to <u>chemotherapy</u> and <u>radiation therapy</u>. Unfortunately, for most people, the cancer will return at some point.</p>
+                <br>
+                <h5>B.) Non-small cell lung cancer (NSCLC)</h5>
+                <p>Non-small cell lung cancer is a disease in which malignant (cancer) cells form in the tissues of the lung. Smoking is the major risk factor for non-small cell lung cancer. For most patients with non-small cell lung cancer, current treatments do not cure the cancer.</p>
+            <br>
+            <br>
+
+              <div class="row">
+                <div style="margin-left:8%;" class="col">
+                    <div  class="card" style="width: 26rem;">
+              
+                        <div class="card-body">
+                      
+                          <h5 class="card-title"><i>Signs & Symptons of NSCLC</i></h5>
+                        
+                          <div style="background-color: #f8ecd1; border-radius: 10px;">
+                          <ol>
+                         <p  class="card-text"><li>Fatigue</li></p>
+                          <p class="card-text"><li>Cough</li></p>
+                          <p class="card-text"><li>Shortness of Breath</li></p>
+                          <p class="card-text"><li>Loss of appetite</li></p>
+                          <p class="card-text"><li>Coughing up phlegm or mucus</li></p>
+                          <p class="card-text"><li>Coughing up blood</li></p>
+                          <p class="card-text"><li>Unintentional weight loss</li></p>
+                        
+                        </ol>
+                    </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col">
+                    <div  class="card" style="width: 26rem;">
+                        <div class="card-body">
+                          <h5 class="card-title"><i>Signs & Symptons of SCLC</i></h5>
+                         <div style="background-color: #f8ecd1; border-radius: 10px;">
+                          <ol>
+                          <p class="card-text"><li>Chest discomfort or pain</li></p>
+                          <p class="card-text"><li>Trouble breathing</li></p>
+                          <p class="card-text"><li>Wheezing</li></p>
+                          <p class="card-text"><li>Loss of appetite</li></p>
+                          <p class="card-text"><li>Trouble swallowing</li></p>
+                          <p class="card-text"><li>Swelling in the face and/or veins in the neck</li></p>
+                          <p class="card-text"><li>Weight loss for no known reason</li></p>
+                        
+                        </ol>
+                    </div>
+                        </div>
+                      </div>
+                </div>
+              </div>
+
+
+            </div>
       
        
     </body>

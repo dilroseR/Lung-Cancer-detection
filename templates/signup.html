@@ -3,13 +3,12 @@
         <title>Lung Cancer Detection</title>
         <!-- CSS only -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">  
+        
         <style>
-            body{
-                background-color: blanchedalmond;
-            }
+           
 
             .d1{
-                background-color: whitesmoke;
+                background-color: rgb(228, 228, 228);
                 position:relative;
                 height: 550px;
                 width: 520px;
@@ -63,7 +62,9 @@
         }
 
         </style>
+    
         <script>
+            
             function validate()
             {
                 var uname = document.getElementById('u')
@@ -80,6 +81,7 @@
                     uname.value=""
                     uname.focus()
                     return false
+              
                 }
 
                 if (name.value.length<2)
