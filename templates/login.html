@@ -6,7 +6,7 @@
             .d1{
                 height: 80%;
                 width:40%;
-                background-color: rgb(184, 188, 250);
+                background-color: rgb(212, 230, 252);
                 float: right;
                 margin-right: 8%;
                 margin-top: 3%;
@@ -30,7 +30,7 @@
             }
             .form-control{
                 width: 400px;
-                background-color:rgb(226, 228, 255) ;
+               
             }
             .l1{
                 margin-left: 7%;
@@ -40,12 +40,59 @@
             .alert-danger{
                 text-align: center;
             }
+            .topnav {
+        overflow: hidden;
+        background-color: #125e91;
+      
+        }
+
+        .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        }
+
+        .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+        }
+
+        .topnav a.active {
+        background-color: #6fa2c4;
+        color: white;
+        }
+
+        .topnav-right {
+        float: right;
+        }
+
+        .a1{
+            color: #ddd;
+        }
+
+        .a1 a:hover {
+        background-color: black;
+        color: #ddd;
+        }
         </style>
     </head>
     <body>
+        <div class="topnav">
+            <a class="active" href='{{ url_for("home") }}'>Home</a>
+            
+            <a class="a1"><b>Lung Cancer Detection</b></a>
+            
+            <div class="topnav-right">
+              <a href='{{ url_for("login") }}'>Login</a>
+              <a href='{{ url_for("signup") }}'>Register</a>
+            </div>
+          </div>
         {% if(msg == 1) %}
         <div class="alert alert-danger" role="alert">
-            Invalid login
+            Invalid login!
           </div>      
     {% endif %}
         
@@ -71,7 +118,7 @@
                     </center>
                         <label class="l1" for=""><b>Password</b></label>
                         <center>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" name= 'pw' placeholder="Enter your password" required>
+                        <input type="password" class="form-control" id="exampleFormControlInput1" name= 'pw' placeholder="Enter your password" required>
                         <br><br>
                         <button type="submit" class="btn btn-dark">LOGIN</button>
                         <br><br>

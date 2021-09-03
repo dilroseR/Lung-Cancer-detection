@@ -22,6 +22,48 @@
                 width: 400px;
             }
         </style>
+        <script>
+            function validate()
+            {
+             var p1 = document.getElementById('p1')
+                var r = /^[A-Za-z]+$/
+                var num = /[0-9]/
+                var lower = /[a-z]/
+                var upper = /[A-Z]/
+
+                if (p1.value.length<7 || p1.value.length>15)
+                {
+                    alert("Password's min length should be 8 & max length should be 14")
+                    p1.value=""
+                    p1.focus()
+                    return false
+                }
+                if (! num.test(p1.value))
+                {
+                    alert('Your password should contain atleast one digit')
+                    p1.value=""
+                    p1.focus()
+                    return false
+                }
+                
+                if (! lower.test(p1.value))
+                {
+                    alert('Your password should contain atleast one lower character')
+                    p1.value=""
+                    p1.focus()
+                    return false
+                }
+                if (! upper.test(p1.value))
+                {
+                    alert('Your password should contain atleast one upper character')
+                    p1.value=""
+                    p1.focus()
+                    return false
+                }
+                return true
+            }
+        
+        </script>
     </head>
 
     <body>
@@ -54,15 +96,19 @@
             <br><br>
             <h3>Forgot Password?</h3>
             <br><br>
-            <form action="/fp" method="POST">
+            <form action="/fp" method="POST" onsubmit="return validate()">
             <div class="mb-3">
                 <input type="text" class="form-control" id="exampleFormControlInput1" name= 'uname' placeholder="Enter your username" required>
                 <br>
                 <input type="email" class="form-control" id="exampleFormControlInput1" name= 'email' placeholder="Enter your email" required>
                 <br>
-                <input type="text" class="form-control" id="exampleFormControlInput1" name= 'pw1' placeholder="New Password" required>
+                <input title="Password should include:
+                Digits: 0-9
+                Atleast one lowercase letter
+                Atleast one uppercase letter
+                Min length: 8 & Max length: 14" type="password" class="form-control" id="p1" name= 'pw1' placeholder="New Password" required>
                 <br>
-                <input type="text" class="form-control" id="exampleFormControlInput1" name = 'pw2' placeholder="Confirm new password" required>
+                <input type="password" class="form-control" id="exampleFormControlInput1" name = 'pw2' placeholder="Confirm new password" required>
             </div>
             <br><br><br>
             <button type="submit" class="btn btn-danger">Submit</button>
