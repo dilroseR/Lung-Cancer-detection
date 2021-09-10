@@ -58,6 +58,21 @@
                 width: 400px;
         }
         </style>
+        <script>
+          function validate()
+          {
+              var age = document.getElementById('age')
+              if (age <= 0)
+              {
+                  alert("Age can't be zero or less than zero")
+                  age.value=""
+                  age.focus()
+                  return false
+
+              }
+              return true
+          }
+      </script>
     </head>
 
     <body>
@@ -82,10 +97,10 @@
               <br>
           </center>
           <div class="d1">
-          <form action="/check" method="POST">
+          <form action="/check" method="POST" onsubmit="return validate()">
             <label class="l1" for=""><b>1. Age</b></label>
             
-            <input type="text" class="form-control" id="exampleFormControlInput1" name= 'age' placeholder="Enter your age" required>
+            <input type="number" class="form-control" id="exampleFormControlInput1" name= 'age' placeholder="Enter your age" required>
             <br>
 
             <label class="l1" for=""><b>2. Smoke?</b></label>
